@@ -4,3 +4,8 @@ import utest
 
 def MyName():
     return 'Ankur'
+
+@utest.ok
+def failcase():
+    assert 'ankur' == 'sneha'
+    
