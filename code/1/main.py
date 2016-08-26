@@ -1,2 +1,2 @@
 import main
-import sneha,ankur,shalini
+import sneha,ankur
