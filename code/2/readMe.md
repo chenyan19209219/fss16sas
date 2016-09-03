@@ -24,16 +24,15 @@ Two Things NOT TO DO During an Active Shooting
 
 `python think3.py`
 
-[Screenshot for 3.1](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise1.png)
+[![Exercise3.1](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise1.png)](#Exercise3.1)
 
-[Screenshot for 3.2](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise2.png)
+[![Exercise3.2](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise2.png)](#Exercise3.2)
 
-[Screenshot for 3.3](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise3.png)
+[![Exercise3.3](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise3.png)](#Exercise3.3)
 
-[Screenshot for 3.4](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise4.png)
+[![Exercise3.4](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise4.png)](#Exercise3.4)
 
-[Screenshot for 3.5](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise5.png)
-
+[![Exercise3.5](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/excercise5.png)](#Exercise3.5)
 
 > Exercises 4.2
 
@@ -41,7 +40,8 @@ Two Things NOT TO DO During an Active Shooting
 
 [think_4a.py](https://github.com/sneha1302/fss16sas/blob/development/code/2/4.2.py)
 
-[Screenshot for 4.2](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/4.2.png)
+
+[![Exercise4.2](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/4.2.png)](#Exercise4.2)
 
 > Exercise 4.3
 
@@ -49,4 +49,4 @@ Two Things NOT TO DO During an Active Shooting
 
 [think4_3.py](https://github.com/sneha1302/fss16sas/blob/development/code/2/4.3.py)
 
-[Screenshot for 4.3](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/4.3.png)
+[![Exercise4.3](https://github.com/sneha1302/fss16sas/blob/development/code/2/screenshots/4.3.png)](#Exercise4.3)
