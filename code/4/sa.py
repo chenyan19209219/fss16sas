@@ -1,5 +1,5 @@
 from __future__ import division
-from random import *
+import random
 import math
 import sys
 
@@ -8,13 +8,15 @@ def say(x):
 
 def neighbour(s):
     while True:
-        step = 100
-        xn = s + randint(-1*step, step)
-        if xn > pow(-10, 5) and xn < pow(10, 5):
+        step = 5
+        xn = s + random.randint(-1*step, step)
+        if xn > -(10**5) and xn < (10**5):
             return xn
 
 def P(old, new, ratio):
     #say(math.exp((old-new)/ratio))
+    #say(math.exp((old-new)/ratio))
+    #print "\n"
     return math.exp((old-new)/ratio)
 
 
@@ -23,8 +25,14 @@ def Energy(x):
     f2 = (x-2)**2
     min_x = -(10**5)
     max_x = (10**5)
-    e = ((f1+f2)-min_x)/(max_x - min_x)
+    e = float((f1+f2)-min_x)/float(max_x - min_x)
     return e
+
+def randomNeighbour():
+    while True:
+        x=random.randint(-(10**5),(10**5))
+        if x>-(10**5) and x<(10**5):
+            return x
 
 def sa(s0):
     s = s0;
@@ -47,9 +55,9 @@ def sa(s0):
             e = en            #    Yes!
             say("+")
 
-        elif (P(e, en, k/kmax) < random()): # Should we jump to worse?
-            s = sn                  
-            e = en            #    Yes, change state.
+        elif (P(e, en, float(k)/float(kmax)) < random.random()): # Should we jump to worse?
+            s = randomNeighbour()
+            e = Energy(s)            #    Yes, change state.
             say("?")
         else:
             say(".")
@@ -62,4 +70,4 @@ def sa(s0):
     return sb                           # Return the best solution found.
 
 
-sa(randint(int(pow(-10,5)),int(pow(10,5)),))
+sa(random.randint(int(pow(-10,5)),int(pow(10,5)),))
