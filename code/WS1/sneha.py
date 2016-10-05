@@ -3,7 +3,7 @@ from __future__ import print_function, division
 from math import *
 import random
 import sys
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # TODO 1: Enter your unity ID here
 __author__ = "<smshah4>"
@@ -165,7 +165,7 @@ def crossover(mom, dad):
     # TODO 7: Create a new point which contains decisions from
     # the first half of mom and second half of dad
     n = len(mom.decisions)
-    print(mom.decisions[:n//2])
+    #print(mom.decisions[:n//2])
     return Point(mom.decisions[:n//2] + dad.decisions[n//2:])
 
 pop = populate(cone,5)
@@ -226,7 +226,7 @@ def elitism(problem, population, retain_size):
     return final[:retain_size]
 
 mutate(cone, point)
-print(bdom(cone,point,point1))
+#print(bdom(cone,point,point1))
 
 
 def ga(pop_size = 100, gens = 250):
@@ -268,4 +268,4 @@ def plot_pareto(initial, final):
     plt.show()
 
 initial, final = ga(10,20)
-#plot_pareto(initial, final)
+plot_pareto(initial, final)
