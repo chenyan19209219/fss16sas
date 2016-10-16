@@ -1,6 +1,8 @@
+from __future__ import division, print_function
 import sys
 import math
 import random
+
 Decision_bounds = [[0,10],[0,10],[1,5],[0,6],[1,5],[0,10]]
 
 Max_tries = 20
@@ -10,16 +12,25 @@ def say(x):
     sys.stdout.write(str(x))
     sys.stdout.flush()
 
+#here we are changing all the decisions
 def random_assignment():
-    solution[]
+    solution = [-1,-1,-1,-1,-1,-1]
     while True:
-        for i in range(len(Decision_bounds)):
+        for i in xrange(len(Decision_bounds)):
             dec = Decision_bounds[i]
             solution[i] = random.randint(dec[0],dec[1])
         if(check_constraints(solution)):
             return solution
 
-
+def local_search(soln):
+    solution = soln[:]
+    while True:
+        i = random.randint(0,5)
+        dec = Decision_bounds[i]
+        solution[i] = random.randint(dec[0],dec[1])
+        if(check_constraints(solution) and score(solution)<score(soln)):
+            return solution
+        solution = soln[:]
 
 def check_constraints(soln):
     if(soln[0]+soln[1]-2 < 0):
@@ -38,35 +49,40 @@ def check_constraints(soln):
     return True
 
 def score(soln):
-    f1 = -25*(soln[0]-2)**2 + (soln[1]-2)**2 + ((soln[2]-1)**2)*(soln[3]-4)**2 + (soln[4]-1)**2
+    f1 = -25*(soln[0]-2)**2 + (soln[1]-2)**2 + (((soln[2]-1)**2)*(soln[3]-4))**2 + (soln[4]-1)**2
     f2 = soln[0]**2 + soln[1]**2 + soln[2]**2 + soln[3]**2 + soln[4]**2 + soln[5]**2
-
-    return f1 + f2
+    return (f1 + f2)
 
 
 def mws():
+    best_solution = random_assignment()
     for i in xrange(Max_tries):
-        best_solution = random_assignment()
+        current_solution = random_assignment()
         for j in xrange(Max_changes):
-            new_solution = random_assignment()
-            if(score(new_solution) < score(best_solution)):
+            if (score(current_solution) < score(best_solution)):
                 say("!")
-                best_solution = new_solution[:]
-            else
+                best_solution = current_solution[:]
 
+            if (0.5 < random.random()):
+                prev_solution = current_solution[:]
+                current_solution = random_assignment()
+            else:
+                prev_solution = current_solution[:]
+                current_solution = local_search(current_solution)
 
+            if (score(current_solution) < score(best_solution)):
+                best_solution = current_solution[:]
+                say("!")
 
+            if (score(current_solution) < score(prev_solution)):
+                say("+")
+            else:
+                say(".")
 
+        print(", ", round(score(best_solution), 5))
 
-FOR i = 1 to Max_tries DO
-  solution = random assignment
-  FOR j =1 to Max_changes DO
-    IF  score(solution) > threshold
-        THEN  RETURN solution
-    FI
-    c = random part of solution
-    IF    p < random()
-    THEN  change a random setting in c
-    ELSE  change setting in c that maximizes score(solution)
-    FI
-RETURN failure, best solution found
+    print("#iterations:", Max_tries)
+    print("best solution:",  best_solution)
+    print("best score:", score(best_solution))
+
+mws()
