@@ -4,4 +4,4 @@
 
 `Max Walk Sat`
 
-[![MWS](https://github.com/sneha1302/fss16sas/blob/development/code/4/Screenshot/mws.png)](#MaxWalkSat)
+[![MWS](https://github.com/sneha1302/fss16sas/blob/development/code/5/Screenshot/mws.png)](#MaxWalkSat)
