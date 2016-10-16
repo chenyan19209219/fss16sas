@@ -24,13 +24,16 @@ def random_assignment():
 
 def local_search(soln):
     solution = soln[:]
-    while True:
+    tries = 0
+    while (tries <100):
+        tries = tries + 1
         i = random.randint(0,5)
         dec = Decision_bounds[i]
         solution[i] = random.randint(dec[0],dec[1])
         if(check_constraints(solution) and score(solution)<score(soln)):
             return solution
         solution = soln[:]
+    return soln
 
 def check_constraints(soln):
     if(soln[0]+soln[1]-2 < 0):
@@ -63,13 +66,11 @@ def mws():
                 say("!")
                 best_solution = current_solution[:]
 
+            prev_solution = current_solution[:]
             if (0.5 < random.random()):
-                prev_solution = current_solution[:]
                 current_solution = random_assignment()
             else:
-                prev_solution = current_solution[:]
                 current_solution = local_search(current_solution)
-
             if (score(current_solution) < score(best_solution)):
                 best_solution = current_solution[:]
                 say("!")
