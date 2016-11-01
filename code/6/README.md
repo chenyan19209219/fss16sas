@@ -2,4 +2,17 @@
 
 `Max Walk Sat `
 
-[![MWS](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/mws.png)](#MaxWalkSat)
+[![MWS_Schaffer](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/MWS_schaffer.png)](#MaxWalkSat_schaffer)
+
+[![MWS_kursawe](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/mws_kursawe.png)](#MaxWalkSat_kursawe)
+
+[![MWS_osy](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/osy_mws.png)](#MaxWalkSat_osy)
+
+
+`Simulated Annealing`
+
+[![SA_Schaffer](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/SA_Schaffer.png)](#SA_schaffer)
+
+[![Osy_SA](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/osy_SA.png)](#SA_Osy)
+
+[![kursawe_SA](https://github.com/sneha1302/fss16sas/blob/development/code/6/Screenshot/sa_kursawe.png)](#kursawe_SA)
