@@ -3,16 +3,15 @@ from Problem import *
 
 class Schaffer(Problem):
     def __init__(self):
-        names = ['x1']
+        names = ['x']
         lows =[-10**5]
-        highs =[10**5]
-        self.points = []
+        high =[10**5]
         decisions = [Decision(n,l,h) for n,l,h in zip(names,lows,highs)]
         objectives = [Objective("f1",True), Objective("f2", True)]
         Problem.__init__(self, decisions, objectives)
 
     @staticmethod
-    def evaluate(self,point):
+    def evaluate(point):
         def minimize(i):
             if self.objectives[i].do_minimize:
                 return 1
@@ -24,5 +23,8 @@ class Schaffer(Problem):
         return point.objectives
 
     @staticmethod
-    def is_valid(self,point):
-        return True
+    def is_valid(point):
+        x = point.decisions[0]
+        if x >= lows[0] and x <= highs[0]:
+            return True
+        return False

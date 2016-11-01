@@ -1,10 +1,10 @@
 from __future__ import print_function, division
+from math import *
 import random
 import sys
-import math
 
 # TODO 1: Enter your unity ID here
-__author__ = "akatari2 | smsejwan | smshah4"
+__author__ = "smshah4"
 
 class O:
     """
@@ -128,11 +128,11 @@ class Problem(O):
         return True
 
     #might have to change this
-    def any(self, retries=500):
+    def generate_one(self, retries = 20):
         for _ in xrange(retries):
-            point = Point([random.randint(int(d.low), d.high) for d in self.decisions])
-            if self.is_valid(self, point):
+            point = Point([random_value(d.low, d.high) for d in self.decisions])
+            if self.is_valid(point):
                 self.evaluate(self, point)
                 self.points.append(point)
                 return point
-        raise RuntimeError("Exceeded max runtimes of %d" % retries)
+        raise RuntimeError("Exceeded max runtimes of %d" % 20)

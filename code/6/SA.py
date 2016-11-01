@@ -6,36 +6,38 @@ import sys
 
 class SA(O):
     def sa(self, model, kmax=1000, emax=625):
-        def set_min_or_max_energy():
-                rand_point = model.any()
-                max_e = rand_point.energy
-                for _ in xrange(n_times):
-                    rand_point = model.any()
-                    if rand_point.energy > max_e:
-                        max_e = rand_point.energy
+        def set_min_or_max_energy(n=300):
+                random_pt = model.any()
+                max_e = random_pt.energy
+                for _ in xrange(n):
+                    random_pt = model.any()
+                    if random_pt.energy > max_e:
+                        max_e = random_pt.energy
                 return max_e
 
-        def P(old, new, ratio):
+        def P(old, new, ratio, emax):
             #say(math.exp((old-new)/ratio))
             #say(math.exp((old-new)/ratio))
             #print "\n"
-            return math.exp((old-new)/ratio)
+            if ratio is 0:
+                ratio = 0.001
+            var = float(new - old) / math.fabs(emax) / ratio
+            return math.exp(var)
 
-        def neighbour(p,retries = 100):
-            point = p.clone()
-            no_of_dec = len(point.decisions) - 1
-            i = 0
-            while i != retries :
-                dec = point.random.randint(0, no_of_dec)
-                point.decisions[dec] = random.randint(int(model.decisions[dec].low), int(model.decisions[dec].high))
-
-                if point.is_valid():
-                    model.evaluate(model,point)
-                    model.points.append(point)
-                    return point
+        def neighbour(point,retries = 100):
+            p = point.clone()
+            while retries:
+                decision = random.randint(0, len(p.decisions) - 1)
+                p.decisions[decision] = random.randint(int(model.decisions[decision].low),
+                                                       int(model.decisions[decision].high))
+                if model.is_valid(model, p):
+                    model.evaluate(model, p)
+                    model.points.append(p)
+                    return p
                 else:
-                    i = i+1
-            return p
+                    p.decisions = point.decisions
+                    retries -= 1
+            return point
 
         def Energy(p):
             f1 = model.p.decisions[0]**2
@@ -49,36 +51,37 @@ class SA(O):
                 if x>-(10**5) and x<(10**5):
                     return x
 
-        s = model.generate_one()
+        s = model.any()
         #e = Energy(s)                      # Initial state, energy.
         sb = s
-        eb = e                              # Initial "best" solution
+        #eb = e                              # Initial "best" solution
         k = 1                             # Energy evaluation count.
-        kmax = 1000
         emax = set_min_or_max_energy()
         while (k < kmax and sb.energy < emax):         # While time remains & not good enough:
             sn = neighbour(s)                  #   Pick some neighbor.
-            en = Energy(sn)                        #   Compute its energy.
+            #en = Energy(sn)                        #   Compute its energy.
             if sn.energy > sb.energy:                       #   Is this a new best?
                 sb = sn
                 #eb = en                         #     Yes, save it.
-                display("!")
+                say("!")
 
             if sn.energy > s.energy :                     # Should we jump to better?
                 s = sn
                 #e = en            #    Yes!
-                display("+")
+                say("+")
 
-            elif (P(s.energy, sn.energy, float(k)/float(kmax)) < random.random()): # Should we jump to worse?
+            elif P(s.energy, sn.energy, k / kmax, emax) < random.random():# Should we jump to worse?
                 s = sn
                 #e = Energy(s)            #    Yes, change state.
-                display("?")
+                say("?")
             else:
-                display(".")
+                say(".")
 
             k = k + 1                        #   One more evaluation done,
 
-            if k % 50 == 0:
-                print "\n",sb
+            if not k % 25:
+                print ""
+                print format(sb.energy, '12d'), ' ',
+                print format(sn.energy, '12d'), ' ',
 
         return sb                           # Return the best solution found.
