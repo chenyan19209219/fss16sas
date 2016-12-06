@@ -9,6 +9,7 @@ from stats import rdivDemo as sk
 #for dtlz_name, dtlz_definitions in zip(["dtlz1"], "dtlz3", "dtlz5", "dtlz7"], [DTLZ1(), DTLZ3(), DTLZ5(), DTLZ7()]):
 for dtlz_name, dtlz_definitions in zip(["dtlz1","dtlz3","dtlz5","dtlz7"], [DTLZ1, DTLZ3, DTLZ5,DTLZ7]):
     for num_obj in [2, 4, 6, 8]:
+
         hv_stats = []
         run_stats = []
         for num_dec in [10, 20, 40]:
@@ -31,5 +32,6 @@ for dtlz_name, dtlz_definitions in zip(["dtlz1","dtlz3","dtlz5","dtlz7"], [DTLZ1
                 #run_stats.append(info_runs)
 
         sk(hv_stats)
-        #sk(run_stats)
-        print "Done"
+        #sk(run_stats
+        print str(num_obj) +" Objectives done for  " + dtlz_name + " !! "
+print "Done"
