@@ -90,7 +90,7 @@ There are a number of threats to validity in this concerned project.
 
 * The optimizers are run on a specific model only, DTLZ7. This model has objectives which differ from those of other objectives. The performances of the optimizers cannot be concluded as best, better and worse based on these results alone. They may perform differently on other models, based on the objectives and decisions encountered.
 
-* Statistical Analysis of Scott-Knott is done based on the mean  of the euclidean distance of a candidate from its nearest neighbor of the baseline population. Thus the number of objectives get merged as a single value for easy comparison. Due to this, it is possible that the effective analysis gets disturbed.
+* Statistical Analysis of Scott-Knott is done based on the mean  of the euclidean distance of a candidate from its nearest neighbor of the baseline population. Thus the number of objectives get merged as a single value for easy comparison. Due to this, it is possible that the effective analysis gets disturbed. 
 
 ###**Future Work**
 
@@ -106,6 +106,6 @@ Based on the threats of validity and shortcomings of this project, this analysis
 https://github.com/txt/mase/blob/master/src/doc/sk.py
 </li>
 <li>
-https://github.com/txt/ase16/blob/master/doc/perform.md
+https://github.com/ai-se/Spread-HyperVolume
 </li>
 </ol>
