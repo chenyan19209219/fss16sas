@@ -64,7 +64,7 @@ Type 1 - median performance scores 2 runs
 ![median_type1](results/IGD median.png)
 
 
-Upon successful completion of 20 iterations of each optimizer on the model, we find the median of all the IGDs for each optimizer. The optiperforms best , thus we see that MWS and DE have very less IGD as compared to SA. So based on median MWS performs the best.
+Upon successful completion of 20 iterations of each optimizer on the model, we find the median of all the IGDs for each optimizer. Thus we see that MWS and DE have very less IGD as compared to SA. So based on median MWS performs the best.
 The results with and without early termination are similar and thus early termination does not affect the final out come thus reducinng the computation cost
 
 Type 2 - Effect size test
