@@ -78,14 +78,14 @@ number 10, 20 , 40 represents the number of decisions.
 
 ####DTLZ1 - before and after optimization
 
-![DTLZ1 plot]()
+![DTLZ1 plot](/img/dtlz1.png)
 
 Above is the plot for DTLZ1 for the different number of objectives and decisions. We can see from the graph that the hypervolume
 values are getting reduced . Hence we can conclude that the DE doesn't optimize the GA for DLTZ1 .
 
 ####DTLZ3 - before and after optimization
 
-[DTLZ3 plot]()
+![DTLZ3 plot](/img/dtlz3.png)
 
 The plot for DTLZ3 for the various number of objectives and decisions is shown above.  We can see from the graph that the hypervolume
 numbers are getting improved significantly upto factor of 2 to 3 for 4,6,8 objectives. However this change is not very
@@ -99,7 +99,7 @@ numbers are getting improved significantly upto factor of 2 to 3 for 4,6,8 objec
 significant for 2 objectives. Hence we can conclude that the DE optimizes the GA for DLTZ5 with 4,6,8 objectives to a significant
 extent but not for 2 objectives.
 
-![DTLZ5 plot]()
+![DTLZ5 plot](/img/dtlz5.png)
 
 ####DTLZ7 - before and after optimization
 
@@ -108,7 +108,7 @@ numbers are getting improved significantly upto factor of 1 to 1.5 for 8 objecti
 gets reduced. While there is no change for 2, 4 objectives .Hence we can conclude that the DE optimizes the GA for DLTZ7
 to a significant extent for 8 objectives.Also , this number gets worsened for DTLZ7 with 2 objectives.
 
-![DTLZ7]()
+![DTLZ7](/img/dtlz7.png)
 
 It can be observed from the graphs that optimizing the GA through DE produced a significant improvement in the
 hypervolume values for some of the DTLZ cases but not for all.
