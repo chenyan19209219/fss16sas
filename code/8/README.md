@@ -219,13 +219,26 @@ What is interesting to see is that as the number of objectives increases, the hy
 ## Future Work
 * It would be worthwhile  to implement Spread and Intergenerational Distance as a final population fitness measurement in a addition to hypervolume. Perhaps Cdom and Bdom produce different values for Spread and IGD in a way that is not reflected in hypervolume.
 * Also changing the number of generations and the population size that NSGA-II has available may help aid in understanding and study the results better.
-* We havent implemented early termination in this
+* We havent implemented early termination in this, which can be implemented to improve on the computation time.
 
 
 ## References
- [1] http://www.tik.ee.ethz.ch/file/c7c5e610a0c7e26d566a3601e5cce2f4/DTLZ2001a.pdf
- [2] http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/
- [3] https://github.com/wreszelewski/nsga2/tree/master/nsga2
- [4] https://ls11-www.cs.uni-dortmund.de/rudolph/hypervolume/start
- [5] https://github.com/txt/ase16/blob/master/doc/perform.md
- [6] https://github.com/txt/ase16/blob/master/doc/stats.md
+<ol>
+<li>
+http://www.tik.ee.ethz.ch/file/c7c5e610a0c7e26d566a3601e5cce2f4/DTLZ2001a.pdf
+</li>
+<li>
+http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/
+</li>
+<li>
+https://github.com/wreszelewski/nsga2/tree/master/nsga2
+</li>
+<li>
+https://ls11-www.cs.uni-dortmund.de/rudolph/hypervolume/start
+</li>
+<li>
+https://github.com/txt/ase16/blob/master/doc/perform.md
+</li>
+<li>
+https://github.com/txt/ase16/blob/master/doc/stats.md</li>
+</ol>
