@@ -85,7 +85,9 @@ Thus our experiment of testing the optimizers for their performance, with and wi
 
 Early termination results:
 
-The results for early termination are as below, MWS terminates early and this is expected as the SA generally jumps around 
+The results for early termination are as below, MWS terminates early and this is expected as the SA generally jumps around
+
+
 ![early termination](results/early_term.png)
 
 
