@@ -5,7 +5,6 @@
 #####**Directions to run Code 9**
 
 * Run python main.py and main1.py to compute the results of DTLZ1 and DTLZ3,5,7 respectively
-_____________________________________________________________________________________________________________________________
 
 ##Hyper Parameter Optimization
 
@@ -79,14 +78,14 @@ number 10, 20 , 40 represents the number of decisions.
 
 ####DTLZ1 - before and after optimization
 
-![DTLZ1 plot](https://github.com/bhanuanand28/x9115222/blob/master/hw/code/10/ScreenShots/DTLZ1.jpg)
+![DTLZ1 plot]()
 
 Above is the plot for DTLZ1 for the different number of objectives and decisions. We can see from the graph that the hypervolume
 values are getting reduced . Hence we can conclude that the DE doesn't optimize the GA for DLTZ1 .
 
 ####DTLZ3 - before and after optimization
 
-[DTLZ3 plot](https://github.com/bhanuanand28/x9115222/blob/master/hw/code/10/ScreenShots/DTLZ3.jpg)
+[DTLZ3 plot]()
 
 The plot for DTLZ3 for the various number of objectives and decisions is shown above.  We can see from the graph that the hypervolume
 numbers are getting improved significantly upto factor of 2 to 3 for 4,6,8 objectives. However this change is not very
@@ -100,7 +99,7 @@ numbers are getting improved significantly upto factor of 2 to 3 for 4,6,8 objec
 significant for 2 objectives. Hence we can conclude that the DE optimizes the GA for DLTZ5 with 4,6,8 objectives to a significant
 extent but not for 2 objectives.
 
-![DTLZ5 plot](https://github.com/bhanuanand28/x9115222/blob/master/hw/code/10/ScreenShots/DTLZ5.jpg)
+![DTLZ5 plot]()
 
 ####DTLZ7 - before and after optimization
 
@@ -109,7 +108,7 @@ numbers are getting improved significantly upto factor of 1 to 1.5 for 8 objecti
 gets reduced. While there is no change for 2, 4 objectives .Hence we can conclude that the DE optimizes the GA for DLTZ7
 to a significant extent for 8 objectives.Also , this number gets worsened for DTLZ7 with 2 objectives.
 
-![DTLZ7](https://github.com/bhanuanand28/x9115222/blob/master/hw/code/10/ScreenShots/DTLZ7.jpg)
+![DTLZ7]()
 
 It can be observed from the graphs that optimizing the GA through DE produced a significant improvement in the
 hypervolume values for some of the DTLZ cases but not for all.
@@ -128,7 +127,7 @@ Tuning with DE worsens optimization achieved through DE for DTLZ1 and DTLZ7 for 
 4. The code was run for a very limited number of iterations of both GA and DE because of time constraints.
 
 ###Future Work
-1. The code simply takes hours to run , once. We can somehow use better algorithm and a faster mechanism to obtain results so that several other threats mentioned above can be easily confirmed. 
+1. The code simply takes hours to run , once. We can somehow use better algorithm and a faster mechanism to obtain results so that several other threats mentioned above can be easily confirmed.
 1. The code could be run for more number of iterations for DE and for GA.
 2. Instead of just using hypervolume , we could also use spread or the loss and compute multiple graphs. Instead on measuring
    performance based on just hypervolume , we could base it on all three of the parameters and then conclude results.
