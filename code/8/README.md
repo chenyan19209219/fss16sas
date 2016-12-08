@@ -18,24 +18,24 @@ All models in this experiment come from the DTLZ family.
 
 #### DTLZ1
 
-![alt tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/dtlz1.png)
+![alt tag](images/dtlz1.png)
 
 DTLZ1 can be used with any number of objectives and decisions. The pareto frontier for this model is a straight line.
 
 #### DTLZ3
 
-![alt_tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/dtlz3.png)
+![alt_tag](images/dtlz3.png)
 
 DTLZ3 can be used with any number of objectives and decisions. The pareto frontier for this model is a downward sloping curved line.
 
 #### DTLZ5
-![alt tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/dtlz5.png)
+![alt tag](images/dtlz5.png)
 
 DTLZ5 can be used with any number of objectives and decisions. The pareto frontier for this model is also a downward sloping curved line. For some reason, this model became one of the most challenging ones for NSGA-II to fit, especially when dealing with higher numbers of objectives.
 
 #### DTLZ7
 
-![alt tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/dtlz7.png)
+![alt tag](images/dtlz7.png)
 
 DTLZ7 is a model created in order to test the potential for optimizers to find and maintain several distinct disjointed pareto-optimal solutions. As you can see, when using two objectives, x1 and x2, the pareto-optimal regions are spread out quite a bit. With DTLZ7 it is possible to implement the model using any number of objectives and any number of decisions.
 
@@ -59,7 +59,7 @@ NSGA-II is another genetic algorithm where the method of selecting the populatio
 
 *Primary-sort uses fast-non-dominated-sort , the algorithm of which is as below
 
-![alt tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/fast_non_dominated_sort.png)
+![alt tag](images/fast_non_dominated_sort.png)
 
 *secondary-sort uses either continuous domination or binary domination + cuboid-distance.
 
@@ -71,7 +71,7 @@ Candidate solutons that dominate points and have a higher cdom score are more li
 
 #### Bdom + Cuboid
 Cuboid distances are basically the sum of the vertical spaces between the closest candidates to a point. The cuboid distances for each point are compared against one another using binary domination.
-![alt tag](https://github.com/sneha1302/fss16sas/tree/development/code/8/images/cuboid_distance.png)
+![alt tag](images/cuboid_distance.png)
 
 Binary domination compares two solutions such that:
 1. at least one objective in the first solution is better than any objective in the second solution
@@ -201,7 +201,7 @@ rank ,         name ,    med   ,  iqr
 
 For DTLZ1 and DTLZ3 there is not any difference or relevant result value that are being produced . For DTLZ5 and DTLZ7 are producing some results
 DTLZ5 turned out to be the only model that produced results that were statisticaly different from one another.
-DTLZ7 is producing good results for 2 objectives for 10, 20 decisions  and  dtlz5 for 40 decisions and all the objectives also performed good.  Surprisingly  bdom+cuboid seems to perform better against the cdom sorting. 
+DTLZ7 is producing good results for 2 objectives for 10, 20 decisions  and  dtlz5 for 40 decisions and all the objectives also performed good.  Surprisingly  bdom+cuboid seems to perform better against the cdom sorting.
 
 The results seem to be random
 There appears to be no real difference between hypervolumes of models optimized with bdom + cuboid sorting verses models optimized  with cdom.
