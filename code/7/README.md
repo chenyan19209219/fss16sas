@@ -71,6 +71,7 @@ Type 2 - Effect size test
 
 ![small_Effect](results/a12_only_run1.png)
 
+Above is a ranking of the 3 optimizers: The eras for all 20 repeats for each optimizer is collected and plotted using Scott-Knott algorithm.
 Using this test a few times we repeatedly got MWS as the best optimizer for the current population and other parameters set. Followed by DE.
 
 
@@ -81,6 +82,12 @@ Type 3 - Effect size with hypothesis
 The performance of DE is being proven to be the best . Although there is not much difference in the scores of DE and MWS in all the 3 types of comparison.
 
 Thus our experiment of testing the optimizers for their performance, with and without early termination has proven that the performance  is best for MWS, closely followed by DE whereas SA left far behind in the race for the model DTLZ7 with 10 decisions and 2 objectives   
+
+Early termination results:
+
+The results for early termination are as below, MWS terminates early and this is expected as the SA generally jumps around 
+![early termination](results/early_term.png)
+
 
 ###**Threats to Validity**
 
